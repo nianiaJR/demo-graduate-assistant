@@ -2,7 +2,7 @@
     .nav
         .logo
         .search
-            input
+            input(placeholder="Search within Canvas")
             icon(name="search")
         .pull-right(v-if="isLogined")
         .pull-right(v-else)
@@ -14,7 +14,7 @@
                 a(href="") EN
             .link-group
                 a(href="") Login
-                a(href="") Sign Up
+                a(href="#/sign") Sign Up
 </template>
 
 <script>
@@ -46,15 +46,20 @@ export default {
         border: 1px solid #d1d1d1;
         box-shadow: 2px 2px 5px #a9a9a5;
         background-color: #fff;
+        overflow: hidden;
         > input {
             display: inline-block;
+            padding: 0 10px;
             width: 250px;
-            height: 26px;
+            height: 30px;
             border: 0;
-        }   
+            &:hover, &:focus {
+                outline: none;
+            }
+        }
         > .fa-icon {
             padding: 2px 5px;
-            height: 26px;
+            height: 28px;
             border-left: 1px solid #a6a6a6;
         }
     }

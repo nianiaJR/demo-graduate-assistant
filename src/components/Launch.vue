@@ -36,25 +36,26 @@
                     span Universities overseas.
             li.contact
                 h3 CONTACT US
-                dl
-                    dt
-                        icon(name="map-marker")
-                    dd
-                        p 185 Nanjing Xi Lu, Jing’an
-                        p Qu, Shanghai, China 20000
-                dl
-                    dt
-                        icon(name="envelope-o")
-                    dd
-                        p info@canvas.org
-                dl
-                    dt
-                        icon(name="phone")
-                    dd
-                        p (+86) 323 555 1111
+                .wrap
+                    dl
+                        dt
+                            icon(name="map-marker")
+                        dd
+                            p 185 Nanjing Xi Lu, Jing’an
+                            p Qu, Shanghai, China 20000
+                    dl
+                        dt
+                            icon(name="envelope-o")
+                        dd
+                            p info@canvas.org
+                    dl
+                        dt
+                            icon(name="phone")
+                        dd
+                            p (+86) 323 555 1111
             li.follow
                 h3 FOLLOW US
-                img.qrcode(src="../assets/qrcode.jpg" width="150" height="150")
+                img.qrcode(src="../assets/qrcode.jpg" width="120" height="120")
 </template>
 
 <script>
@@ -171,8 +172,9 @@ export default {
         padding: 5%;
         list-style: none;
         > li {
-            flex: 1;
+            flex: 2;
             > h3 {
+                margin-bottom: 15px;
                 font-size: 30px;
             }
             > p {
@@ -180,21 +182,33 @@ export default {
             }
         }
         > .contact {
-            > dl {
-                display: flex;
-                align-items: center;
-                border-bottom: 1px solid #9f9fa0;
-                > dt {
-                    width: 42px;
-                    height: 42px;
-                    padding: 0 10px;
-                }
-                > dd {
-                    flex: 1;
+            > .wrap {
+                > dl {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 0;
+                    width: 75%;
+                    border-bottom: 1px solid #9f9fa0;
+                    > dt {
+                        width: 42px;
+                        height: 42px;
+                        padding: 0 10px;
+                        > .fa-icon {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    > dd {
+                        flex: 1;
+                        > p {
+                            font-size: 18px;
+                        }
+                    }
                 }
             }
         }
         > .follow {
+            flex: 1;
             > img {
                 margin: 5px;
             }

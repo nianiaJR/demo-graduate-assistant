@@ -18,6 +18,7 @@ module.exports = {
   ],
   // add your custom rules here
   'rules': {
+    "no-debugger": 0,
     "jsdoc/check-param-names": 2,
     "jsdoc/check-tag-names": 0,
     "jsdoc/check-types": 2,
@@ -107,7 +108,7 @@ module.exports = {
     "no-whitespace-before-property": 2,
     "operator-assignment": 2,
     "semi-spacing": 2,
-    "semi": 2,
+    "semi": ["error", "never"],
     "unicode-bom": 2,
 
     "no-new-require": 2,

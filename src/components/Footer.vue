@@ -12,11 +12,16 @@
                 a(href="") Community Guidelines
                 a(href="") Cookie Policy
                 a(href="") Copyright Policy
-        icon(name="angle-up")
+        .up-wrap(@click="goTop")
+            icon(name="angle-up")
 </template>
 <script>
 export default {
-
+    methods: {
+        goTop () {
+            document.body.scrollTop = 0
+        }
+    }
 }
 </script>
 <style lang="less">
@@ -45,9 +50,12 @@ export default {
             }
         }
     }
-    > .fa-icon {
-        width: 40px;
-        height: 40px;
+    > .up-wrap {
+        cursor: pointer;
+        > .fa-icon {
+            width: 40px;
+            height: 40px;
+        }
     }
 }
 </style>
