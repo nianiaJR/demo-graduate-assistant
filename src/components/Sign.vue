@@ -36,11 +36,11 @@
                     span and&nbsp;
 
                     a(href="") Cookie Policy
-                a.join(href="") Join Canvas
+                a.join(href="#/home", @click="sign") Join Canvas
                 hr
                 p
                     span Already on Canvas?&nbsp;
-                    a(href="") Sign in
+                    a(href="#/home" @click="sign") Sign in
             .contact
                 .title
                     p
@@ -148,7 +148,12 @@
     }
 </style>
 <script>
+import Bus from '../lib/bus.js'
 export default {
-
+    methods: {
+        sign () {
+            Bus.$emit('login')
+        }
+    }
 }
 </script>
