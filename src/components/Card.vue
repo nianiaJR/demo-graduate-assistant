@@ -1,0 +1,70 @@
+<template lang="pug">
+    .card
+        h3
+            a(:href="config.link", target="_blank") {{config.title}}
+        img(:src="config.image")
+        ul
+            li(v-for="tag in config.tags") {{tag}}
+
+        ul.comment
+            li.like
+                icon(name="thumbs-up")
+                span Like
+            li.comment
+                icon(name="comment")
+                span Comment
+            li.share
+                icon(name="share")
+                span Share
+            
+</template>
+<style lang="less">
+    .card {
+        > h3 {
+            margin-bottom: 10px;
+            > a {
+                margin: 5px;
+                text-decoration: none;
+                color: #000;
+                font-size: 35px;
+                font-weight: bolder;
+                font-family: monospace;
+                &:hover {
+                    border-bottom: 1px solid #000;
+                }
+            }
+        }
+        > img {
+            width: 100%;
+        }
+        > ul {
+            display: flex;
+            > li {
+                flex: 1;
+                padding: 10px;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bolder;
+                font-family: monospace;
+            }
+        }
+        > .comment {
+            > li {
+                font-family: san-serif;
+                color: #455ca1;
+                cursor: pointer;
+                .fa-icon {
+                    margin-right: 5px;
+                }
+                &:hover, &:focus {
+                    color: #de4c4c;
+                }
+            }
+        }
+    }
+</style>
+<script>
+    export default {
+        props: ['config']
+    }
+</script>

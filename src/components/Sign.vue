@@ -43,7 +43,7 @@
                     a(href="") Sign in
             .contact
                 .title
-                    p 
+                    p
                         span Or use your Wechat account to
                         br
                         span sign up for Canvas
