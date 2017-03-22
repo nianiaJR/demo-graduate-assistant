@@ -1,9 +1,176 @@
-<style lang="less">
+<style lang="less" scoped>
+    .dot:before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        bottom: 2px;
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+    .people {
+        background: #f2f2f2;
+        padding: 20px 40px;
+        > .resume {
+            display: flex;
+            background: #fff;
+            > img {
+                height: 135px;
+            }
+            > .desc {
+                flex: 1;
+                > h3 {
+                    padding: 10px;
+                    font-size: 35px;
+                    font-weight: bolder;
+                }
+                > p {
+                    padding-left: 10px;
+                    font-size: 16px;
+                }
+                > .contact {
+                    display: flex;
+                    margin-top: 10px;
+                    background: #d9d9d9;
+                    > p {
+                        flex: 1;
+                        padding: 10px;
+                        &:last-child {
+                            background: #bfbfbf;
+                        }
+                        > .fa-icon {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        > ul {
+            > li {
+                margin-top: 10px;
+                padding-bottom: 10px;
+                background: #fff;
+                box-shadow: 1px 1px 3px #aaa;
+                > h3 {
+                    padding: 10px;
+                    background: #ec7f3c;
+                    color: #fff;
+                    font-size: 30px;
+                    font-weight: bolder;
+                }
+                p {
+                    padding: 10px;
+                }
+                > .goods {
+                    display: flex;
+                    > li {
+                        flex: 1;
+                        text-align: center;
+                        > img {
+                            height: 250px;
+                        }
+                        > p {
+                            font-weight: bolder;
+                        }
+                        > .desc {
+                            > span {
+                                display: inline-block;
+                                padding: 0 5px;
+                            }
+                            > span + span {
+                                border-left: 2px solid #5c5ebe;
+                            }
+                        }
+                    }
+                }
+                > .see-more {
+                    display: flex;
+                    padding: 5px 0px;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    background: #7f7f7f;
+                    cursor: pointer;
+                    > .fa-icon {
+                        height: 25px;
+                        width: 25px;
+                    }
+                }
+            }
+            > .love {
+                > .desc {
+                    background: #fff;
+                    overflow: hidden;
+                    > img {
+                        float: left;
+                    }
+                }
+                > p {
+                    color: #8d9198;
+                    cursor: pointer;
+                    > span {
+                        display: inline-block;
+                        margin-left: 5px;
+                    }
+                    &:hover {
+                        color: #000;
+                    }
+                }
+                > input {
+                    margin: 0 1%;
+                    width: 98%;
+                }
+            }
+            > .activity {
+                > ul {
+                    > li {
+                        padding: 10px;
+                        display: flex;
+                        > .desc {
+                            flex: 2;
+                            > h4 {
+                                font-weight: bolder;
+                            }
+                            > .imgs {
+                                display: flex;
+                                > .img {
+                                    flex: 1;
+                                    font-size: 0px;
+                                    > img {
+                                        width: 100%;
+                                        height: 200px;
+                                    }
+                                    > p {
+                                        font-size: 16px;
+                                        background: #4671c2;
+                                        color: #fff;
+                                    }
+                                }
+                                > .img + .img {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                        > .time {
+                            flex: 1;
+                            > p {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 </style>
 <template lang="pug">
     .people
         .resume
-            img(src="../assets/girl.jpg" width="100" height="100")
+            img(src="../assets/girl.jpg")
             .desc
                 h3 Liang Li
                 p Shanghai I China
@@ -11,7 +178,7 @@
                 .contact
                     p Canvas.com/s/bi-yue
                     p
-                      icon(name="envolope")
+                      icon(name="envelope")
                       span Contact
         ul
             li
@@ -40,7 +207,7 @@
                             span Mandarin
                             span English
                             span French
-            li
+            li.activity
                 h3 MY ACTIVITIES
                 ul
                     li
@@ -57,7 +224,7 @@
                                     p Take Your Team Discussion Underwater
 
                         .time
-                            H3 Jan 2016 - Present
+                            h3 Jan 2016 - Present
                             p
                                 img(src="../assets/gold.png")
                                 span Endorsements
@@ -66,10 +233,16 @@
                             h4 Curation Manager, Ju Lu High School Annual Art Festival
                             p.dot Partnered with Disney Shanghai to promote storytelling among students
                             p.dot 500 students and 200 parents attended the event  
-                            .img
-                                img(src="../assets/disney.jpg")
-                            .img
-                                img(src="../assets/disney2.jpg")
+                            .imgs
+                                .img
+                                    img(src="../assets/disney.jpg")
+                                .img
+                                    img(src="../assets/disney2.jpg")
+                        .time
+                            h3 June 2016
+                            p
+                                img(src="../assets/gold.png")
+                                span Endorsements
                 .see-more
                     span see more
                     icon(name="angle-down")
@@ -82,12 +255,16 @@
                 .see-more
                     span see more
                     icon(name="angle-down")
-            li
+            li.love
                 h3 ARTICLES I LOVE
-                .dec
-                    img(scr="../assets/life.png")
+                .desc
+                    img(src="../assets/life.png")
                     h3 Social entrepreneurs take spotlight at TEDWomen
                     p desc descdesdcda
+                p
+                    icon(name="thumbs-up")
+                    span 2 likes
+                input(placeholder="Add a comment")
 </template>
 <script>
 </script>

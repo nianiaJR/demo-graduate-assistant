@@ -16,7 +16,6 @@
             li.share
                 icon(name="share")
                 span Share
-            
 </template>
 <style lang="less">
     .card {
