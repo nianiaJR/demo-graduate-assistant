@@ -27,9 +27,9 @@
         li
             a(href="#/home") Home
         li
-            a(href="") Profile
+            a(href="#/people") Profile
         li
-            a(href="") My Universities
+            a(href="#/university") My Universities
         li
             a(href="") Events
         li

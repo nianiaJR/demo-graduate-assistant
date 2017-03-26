@@ -7,6 +7,9 @@ import Sign from '@/components/Sign.vue'
 import Home from '@/components/Home.vue'
 import University from '@/components/University.vue'
 import People from '@/components/People.vue'
+import Search from '@/components/Search.vue'
+import Result from '@/components/Result.vue'
+import MUniversity from '@/components/MUniversity.vue'
 Vue.component('icon', Icon)
 Vue.use(Router)
 
@@ -36,6 +39,21 @@ export default new Router({
             path: '/people',
             name: 'People',
             component: People
+        },
+        {
+            path: '/search',
+            name: 'Search',
+            component: Search
+        },
+        {
+            path: '/result',
+            name: 'Result',
+            component: Result
+        },
+        {
+            path: '/my-university',
+            Name: 'MyUniversity',
+            component: MUniversity
         }
     ]
 })
