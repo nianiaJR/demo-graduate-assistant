@@ -16,6 +16,7 @@
             li.share
                 icon(name="share")
                 span Share
+        button More Articles
 </template>
 <style lang="less">
     .card {
@@ -27,7 +28,6 @@
                 color: #000;
                 font-size: 35px;
                 font-weight: bolder;
-                font-family: monospace;
                 &:hover {
                     border-bottom: 1px solid #000;
                 }
@@ -44,12 +44,10 @@
                 text-align: center;
                 font-size: 20px;
                 font-weight: bolder;
-                font-family: monospace;
             }
         }
         > .comment {
             > li {
-                font-family: san-serif;
                 color: #455ca1;
                 cursor: pointer;
                 .fa-icon {
@@ -58,6 +56,19 @@
                 &:hover, &:focus {
                     color: #de4c4c;
                 }
+            }
+        }
+        > button {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            font-weight: bolder;
+            font-size: 16px;
+            background: #d9d9d9;
+            cursor: pointer;
+            &:hover, &:focus {
+                background: #aaa;
+                outline: none;
             }
         }
     }

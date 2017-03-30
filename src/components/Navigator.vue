@@ -1,8 +1,8 @@
 <template lang="pug">
 .header
     .nav
-        .logo
-        .search
+        a.logo(:href="link")
+        .search(v-if="isLogined", @click="goSearch")
             input(placeholder="Search within Canvas")
             icon(name="search")
         .pull-right(v-if="isLogined")
@@ -11,17 +11,17 @@
                 icon(name="bell-o")
                 icon(name="bars")
             .link-group.logined
-                a(href="") 中
-                a(href="") EN
+                a(href="#/home") 中
+                a(href="/home") EN
         .pull-right(v-else)
             .link-group
-                a(href="") Home
-                a(href="") About
+                a(href="#/home") Home
+                a(href="/home") About
             .link-group
-                a(href="") 中
-                a(href="") EN
+                a(href="#/home") 中
+                a(href="/#home") EN
             .link-group
-                a(href="") Login
+                a(href="#/sign") Login
                 a(href="#/sign") Sign Up
     ul(v-if="isLogined")
         li
@@ -29,12 +29,7 @@
         li
             a(href="#/people") Profile
         li
-            a(href="#/university") My Universities
-        li
-            a(href="") Events
-        li
-            a(href="") More
-
+            a(href="#/my-university") My Universities
 </template>
 
 <script>
@@ -50,6 +45,20 @@ export default {
             isLogined: false
         }
     },
+    methods: {
+        goSearch () {
+            this.$router.push('Search')
+        }
+    },
+    computed: {
+        link () {
+            if (this.isLogined) {
+                return '#/home'
+            } else {
+                return '#/'
+            }
+        }
+    },
     beforeDestroy () {
         Bus.$off('login')
     }
@@ -57,17 +66,18 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="less" scoped>
+<style lang="less">
 .header {
     > .nav {
         display: flex;
         align-items: center;
         background-color: #deebf7;
         > .logo {
+            display: block;
             margin: 0 20px 0 10px;
             width: 40px;
             height: 60px;
-            background: url('../assets/logo.jpg') left no-repeat;
+            background: url('../assets/logo.png') left no-repeat;
             background-size: 40px;
         }
         > .search {
@@ -91,6 +101,7 @@ export default {
                 padding: 2px 5px;
                 height: 28px;
                 border-left: 1px solid #a6a6a6;
+                cursor: pointer;
             }
         }
         >.pull-right {
@@ -134,7 +145,6 @@ export default {
         > li {
             padding: 10px 0px;
             font-size: 25px;
-            font-family: monospace;
             > a {
                 padding: 0px 10px;
                 display: inline-block;

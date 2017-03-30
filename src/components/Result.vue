@@ -1,11 +1,13 @@
 <style lang="less">
 .result {
+    width: 1040px;
+    margin: auto;
     background: #f2f2f2;
     display: flex;
     > .search {
         margin: 30px 15px;
         padding: 10px;
-        width: 200px;
+        width: 220px;
         height: 400px;
         background: #fff;
         box-shadow: 1px 1px 1px #aaa;
@@ -29,7 +31,7 @@
                 }
                 > .fa-icon {
                     position: absolute;
-                    right: 10px;
+                    right: 30px;
                     top: 50%;
                     transform: translateY(-50%);
                     width:  15px;
@@ -46,9 +48,9 @@
         }
         > a {
             display: block;
-            margin-top: 30px;
+            margin-top: 20px;
             padding: 8px 0px;
-            width: 120px;
+            width: 150px;
             color: #fff;
             background-color: #792f9e;
             outline: none;
@@ -90,7 +92,6 @@
                     > h4 {
                         margin-bottom: 5px;
                         font-weight: bolder;
-                        font-family: monospace;
                         font-size: 18px;
                     }
                     > .btns {
@@ -214,11 +215,11 @@
                         h4 Stanford University
                         p Palo Alto I California
                         .btns
-                            button.green Learn More
+                            button.green(@click="learnMore") Learn More
                             button.purple Follow
                         table.stat
                             tr
-                                th National Rangking
+                                th National Ranking
                                 th % Admission rate
                                 th Tuition Fees
                             tr
@@ -231,11 +232,11 @@
                         h4 UC Berkeley
                         p Berkeley I California
                         .btns
-                            button.green Learn More
+                            button(@click="learnMore").green Learn More
                             button.purple Follow
                         table.stat
                             tr
-                                th National Rangking
+                                th National Ranking
                                 th % Admission rate
                                 th Tuition Fees
                             tr
@@ -249,11 +250,11 @@
                         h4 University of Southern California
                         p Los Angeles California
                         .btns
-                            button.green Learn More
+                            button.green(@click="learnMore") Learn More
                             button.purple Follow
                         table.stat
                             tr
-                                th National Rangking
+                                th National Ranking
                                 th % Admission rate
                                 th Tuition Fees
                             tr
@@ -267,11 +268,11 @@
                         h4 Claremont McKenna College
                         p Claremont I California
                         .btns
-                            button.green Learn More
+                            button.green(@click="learnMore") Learn More
                             button.purple Follow
                         table.stat
                             tr
-                                th National Rangking
+                                th National Ranking
                                 th % Admission rate
                                 th Tuition Fees
                             tr
@@ -282,14 +283,14 @@
                 li
                     img(src="../assets/result5.jpg" width="100" height="100")
                     .desc
-                        h4 Clifornia State University
+                        h4 California State University
                         p Los Angeles I California
                         .btns
-                            button.green Learn More
+                            button.green(@click="learnMore") Learn More
                             button.purple Follow
                         table.stat
                             tr
-                                th National Rangking
+                                th National Ranking
                                 th % Admission rate
                                 th Tuition Fees
                             tr
@@ -302,4 +303,11 @@
 
 </template>
 <script>
+    export default {
+        methods: {
+            learnMore () {
+                this.$router.push('University')
+            }
+        }
+    }
 </script>

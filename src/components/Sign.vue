@@ -15,10 +15,10 @@
                     span Graduate Year
                     .select-wrap
                         select(value="")
-                            option(value="1") 1
-                            option(value="2") 2
-                            option(value="3") 3
-                            option(value="4") 4
+                            option(value="1") 2017
+                            option(value="2") 2018
+                            option(value="3") 2019
+                            option(value="4") 2020
                         icon(name="angle-down")
                 .input-group
                     span Email
@@ -52,6 +52,9 @@
                     img(src="../assets/qrcode.jpg" width="250" height="250")
 </template>
 <style lang="less">
+    html, body, #app {
+        height: 100%;
+    }
     .sign {
         background: url('../assets/sign.jpeg') center no-repeat;
         background-size: cover;
@@ -59,7 +62,6 @@
         height: 100%;
         align-items: center;
         justify-content: center;
-        font-family: monospace;
         > .widget {
             display: flex;
             padding: 80px 0 20px 0px;
@@ -105,7 +107,6 @@
                     font-size: 14px;
                 }
                 > p:last-child {
-                    font-family: monospace;
                     font-weight: bolder;
                 }
                 >.join {

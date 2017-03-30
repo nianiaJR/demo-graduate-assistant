@@ -1,10 +1,17 @@
-<style lang="less" scoped>
-    .search {
-        padding: 10px 30px;
+<style lang="less">
+    #app {
+        height: auto;
+    }
+    #app > .search {
+        margin: 10px auto;
+        width: 1000px;
         background-color: #f2f2f2;
+        button {
+            cursor: pointer;
+        }
         > .operate {
             padding: 10px 10px 30px 10px;
-            box-shadow: 1px 1px 1px;
+            box-shadow: 1px 1px #aaa;
             background-color: #fff;
             > h3 {
                 text-align: center;
@@ -47,6 +54,7 @@
                         position: relative;
                         > select {
                             padding: 10px 25px;
+                            width: 200px;
                             background-color: #ed7b3c;
                             border: none;
                             color: #fff;
@@ -66,7 +74,7 @@
                         }
                         > a {
                             display: inline-block;
-                            height: 100%;
+                            height: 34px;
                             width: 100px;
                             border: none;
                             background: #6f359e;
@@ -86,7 +94,6 @@
                 padding: 10px;
                 color: #fff;
                 background: #558239;
-                font-family: monospace;
                 font-weight: bolder;
             }
             > .show {
@@ -153,9 +160,9 @@
                 }
                 > .beautiful {
                     > .img-wrap {
-                        padding-top: 24%;
+                        padding-top: 22%;
                         background: url('../assets/campus.jpg') bottom no-repeat;
-                        background-size: 100%;
+                        background-size: 93%;
                     }
                 }
                 > .basketball {
@@ -270,7 +277,7 @@
                         .desc
                             em Brown University
                             button.green Learn More
-                            button.purple Follow
+                            button.purple(@click="follow='Following'") {{follow}}
                             p 
                                 span Did you know?
                                 br
@@ -307,4 +314,11 @@
 
 </template>
 <script>
+export default {
+    data () {
+        return {
+            follow: 'Folow'
+        }
+    }
+}
 </script>

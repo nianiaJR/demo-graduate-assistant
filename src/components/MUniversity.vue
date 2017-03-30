@@ -1,6 +1,7 @@
 <style lang="less">
     .my-university {
-        padding: 20px 40px;
+        margin: 20px auto;
+        width: 1000px;
         background: #f2f2f2;
         > .inner {
             background: #fff;
@@ -31,6 +32,13 @@
                                 font-weight: bolder;
                                 margin-right: 5px;
                             }
+                        }
+                        > button {
+                            cursor: pointer;
+                            width: 20px;
+                        }
+                        > input {
+                            margin-right: 10px;
                         }
                     }
                     > .logo, > .name {
@@ -108,8 +116,7 @@
                 tr
                     td.logo
                         img(src="../assets/u1.jpg")
-                    td.name
-                        Stanford University
+                    td.name Stanford University
                     td
                         p
                             em ED:
@@ -126,11 +133,12 @@
                     td
                         p Top3
                         p Beautiful campus with strong entrepreneurship programs
+                        input(v-if="addIndex==0" type="text")
+                        button(@click="addIndex=0") +
                 tr
                     td.logo
                         img(src="../assets/u2.jpg")
-                    td.name
-                        Universit of California Berkeley
+                    td.name Universit of California Berkeley
                     td
                         p
                             em ED:
@@ -146,11 +154,12 @@
                             sup th
                     td
                         p Mum attended, close to home
+                        input(v-if="addIndex==1" type="text")
+                        button(@click="addIndex=1") +
                 tr
                     td.logo
                         img(src="../assets/u3.jpg")
-                    td.name
-                        Pomona College
+                    td.name Pomona College
                     td
                         p
                             em ED:
@@ -166,11 +175,12 @@
                             sup st
                     td
                         p Claremont consortium (I can take classes at other colleges)
+                        input(v-if="addIndex==2" type="text")
+                        button(@click="addIndex=2") +
                 tr
                     td.logo
                         img(src="../assets/u4.jpg")
-                    td.name
-                        Princeton University
+                    td.name Princeton University
                     td
                         p
                             em ED:
@@ -187,11 +197,12 @@
                     td
                         p Top3
                         p Visited back in 2016, amazing arts program
+                        input(v-if="addIndex==3" type="text")
+                        button(@click="addIndex=3") +
                 tr
                     td.logo
                         img(src="../assets/u5.jpg")
-                    td.name
-                        Amherst College
+                    td.name Amherst College
                     td
                         p
                             em ED:
@@ -207,11 +218,12 @@
                             sup st
                     td
                         p Consortium with Wellesley and MIT
+                        input(v-if="addIndex==4" type="text")
+                        button(@click="addIndex=4") +
                 tr
                     td.logo
                         img(src="../assets/u6.jpg")
-                    td.name
-                        Swarthmore College
+                    td.name Swarthmore College
                     td
                         p
                             em ED:
@@ -228,6 +240,8 @@
                     td
                         p Safety
                         p Met representatives in Shanghai
+                        input(v-if="addIndex==5" type="text")
+                        button(@click="addIndex=5") +
             .see-more
                 span See more
                 icon(name="angle-down")
@@ -258,4 +272,12 @@
                     p See more
 
 </template>
-
+<script>
+export default {
+    data () {
+        return {
+            addIndex: -1
+        }
+    }
+}
+</script>

@@ -18,7 +18,8 @@
         background: #f2f2f2;
         > .articles {
             display: flex;
-            padding: 30px 10%;
+            margin: auto;
+            width: 1040px;
             background: #f2f2f2;  
             > .frames {
                 flex: 1;

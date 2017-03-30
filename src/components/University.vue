@@ -1,8 +1,8 @@
 <style lang="less">
     .university {
-        padding: 30px 10%;
+        width: 1000px;
+        margin: 30px auto;
         background: #f2f2f2;
-        font-family: monospace;
         > .intro {
             display: flex;
             > .logo {
@@ -53,7 +53,7 @@
                     > p {
                         flex: 1;
                         display: flex;
-                        padding: 10px 0 30px 20px;
+                        padding: 20px;
                         background: #b4c6e6;
                         font-size: 17px;
                         align-items: center;
@@ -75,21 +75,6 @@
             display: flex;
             margin-top: 5px;
             cursor: pointer;
-            > ul {
-                position: relative;
-                width: 250px;
-                font-size: 0px;
-                > .veil {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 10;
-                    background: #eee;
-                    opacity: 0.5;
-                }
-            }
             > .rd-swipe {
                 flex: 1;
                 height: 300px;
@@ -107,9 +92,9 @@
                 box-shadow: 1px 1px 1px #aaa;
                 background: #fff;
                 > h3 {
-                    padding: 2px 15px;
+                    padding: 5px 15px;
                     background: #a568d0;
-                    font-size: 30px;
+                    font-size: 24px;
                     color: #fff;
                 }
             }
@@ -258,7 +243,7 @@
                     p Palo Alto I California
                     p Private Research University
                 .follow
-                    button Follow
+                    button(@click="follow = 'Following'") {{follow}}
             .state
                 p Canvas.com/uni/stanfordu
                 p
@@ -267,14 +252,6 @@
     .slides
         rd-swipe(:swipe="swipe")
             .rd-swipe-item(:style="{'background-image': `url(${img.url})`}" v-for="(img, index) in imgs")
-        ul
-            li(@click="switchImg(0)")
-                img(src="../assets/s1.jpg" width="250" height="100")
-            li(@click="switchImg(1)")
-                img(src="../assets/s2.jpg" width="250" height="100")
-            li(@click="switchImg(2)")
-                img(src="../assets/s3.jpg" width="250" height="100")
-            .veil &nbsp;
     .stat
         .numbers
             h3 UNIVERSITY IN NUMBERS
@@ -378,6 +355,7 @@ export default {
             swipe: {
                 activeIndex: 0
             },
+            follow: 'Follow',
             isMore: false,
             imgs: [
                 {
