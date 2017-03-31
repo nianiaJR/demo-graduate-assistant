@@ -5,12 +5,12 @@
                 h3 Following
                 ul
                     li(v-for="(config, index) in configs", v-if="index%2==0")
-                        card(:config="config")
+                        card(:config="config", :more="index===4")
             .frames.right
                 h3 Trending
                 ul
                     li(v-for="(config, index) in configs", v-if="index%2==1")
-                        card(:config="config")
+                        card(:config="config", :more="index===5")
 
 </template>
 <style lang="less">

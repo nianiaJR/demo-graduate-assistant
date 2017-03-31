@@ -16,7 +16,7 @@
             li.share
                 icon(name="share")
                 span Share
-        button More Articles
+        button(v-if="more") More Articles
 </template>
 <style lang="less">
     .card {
@@ -75,6 +75,6 @@
 </style>
 <script>
     export default {
-        props: ['config']
+        props: ['config', 'more']
     }
 </script>

@@ -40,6 +40,7 @@
                         }
                     }
                     > .logo, > .name {
+                        cursor: pointer;
                         text-align: center;
                     }
                     &:last-child {
@@ -98,7 +99,7 @@
                         }
                     }
                     > p {
-                        color: #aaa
+                        color: #aaa;
                     }
                 }
             }
@@ -116,9 +117,9 @@
                     th Important Deadlines
                     th Your Notes
                 tr
-                    td.logo
+                    td.logo(@click="goStanford")
                         img(src="../assets/u1.jpg")
-                    td.name Stanford University
+                    td.name(@click="goStanford") Stanford University
                     td
                         p
                             em ED:
@@ -138,7 +139,7 @@
                         input(v-if="addIndex==0" type="text")
                         button(@click="addIndex=0") +
                 tr
-                    td.logo
+                    td.logo(@click="goStanford")
                         img(src="../assets/u2.jpg")
                     td.name Universit of California Berkeley
                     td
@@ -159,7 +160,7 @@
                         input(v-if="addIndex==1" type="text")
                         button(@click="addIndex=1") +
                 tr
-                    td.logo
+                    td.logo(@click="goStanford")
                         img(src="../assets/u3.jpg")
                     td.name Pomona College
                     td
@@ -180,7 +181,7 @@
                         input(v-if="addIndex==2" type="text")
                         button(@click="addIndex=2") +
                 tr
-                    td.logo
+                    td.logo(@click="goStanford")
                         img(src="../assets/u4.jpg")
                     td.name Princeton University
                     td
@@ -202,7 +203,7 @@
                         input(v-if="addIndex==3" type="text")
                         button(@click="addIndex=3") +
                 tr
-                    td.logo
+                    td.logo(@click="goStanford")
                         img(src="../assets/u5.jpg")
                     td.name Amherst College
                     td
@@ -223,7 +224,7 @@
                         input(v-if="addIndex==4" type="text")
                         button(@click="addIndex=4") +
                 tr
-                    td.logo
+                    td.logo(@click="goStanford")
                         img(src="../assets/u6.jpg")
                     td.name Swarthmore College
                     td
@@ -279,6 +280,11 @@ export default {
     data () {
         return {
             addIndex: -1
+        }
+    },
+    methods: {
+        goStanford () {
+            this.$router.push('University')
         }
     }
 }

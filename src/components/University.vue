@@ -284,7 +284,7 @@
                 icon(name="graduation-cap")
                 icon(name="university")
         .fun
-            h3 BULLET POINTS
+            h3 FUN FACTS
             .content
                 img(src="../assets/fun.png", height="100")
                 p The unofficial name for the Stanford mascot is - The Stanford Tree. There has been a fairly selective process to choose the students who get to play the tree, since the responsibility is in high demand.Stanfordhasmanysuccessfulsportteams.Stanfordstudentshavewonmedals ineveryOlympic Games since 1908, winning 244 Olympic medals total, 129 of them gold. In the 2008 Beijing Olympic Games, Stanford won more Olympic medals than any other university in the United States.

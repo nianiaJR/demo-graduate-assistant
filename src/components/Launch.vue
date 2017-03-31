@@ -31,8 +31,8 @@
                     h3 Login
                     input(type="text" placeholder="Username")
                     input(type="text" placeholder="Password")
-                    a(href="#/sign") ENTER
-                    p or Sign Up for FREE
+                    a.sign(href="#/home", @click="sign") ENTER
+                    a.signup(href="#/sign") or Sign Up for FREE
         ul.contact
             li
                 h3 ABOUT US
@@ -71,9 +71,15 @@
 
 <script>
 import rdSwipe from 'vue-slide'
+import Bus from '../lib/bus.js'
 export default {
     components: {
         'rd-swipe': rdSwipe
+    },
+    methods: {
+        sign () {
+            Bus.$emit('login')
+        }
     },
     data () {
         return {
@@ -168,7 +174,7 @@ export default {
                     color: #fff;
                     font-size: 300%;
                 }
-                > input, > a {
+                > input, > a.sign {
                     display: block;
                     margin: 20px auto;
                     width: 85%;
@@ -177,7 +183,7 @@ export default {
                     font-size: 200%;
 
                 }
-                > a {
+                > a.sign {
                     background-color: #4abdac;
                     color: #fff;
                 }
@@ -195,7 +201,9 @@ export default {
                    color: #4abdac;
                 }
 
-                > p {
+                > .signup {
+                    display: block;
+                    text-decoration: initial;
                     position: absolute;
                     bottom: 40px;
                     width: 100%;
