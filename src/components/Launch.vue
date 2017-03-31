@@ -178,21 +178,21 @@ export default {
 
                 }
                 > a {
-                    background-color: #cdace5;
+                    background-color: #4abdac;
                     color: #fff;
                 }
 
                 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-                    color: #a568d0;
+                    color: #4abdac;
                 }
                 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-                   color: #a568d0;
+                   color: #4abdac;
                 }
                 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-                   color: #a568d0;
+                   color: #4abdac;
                 }
                 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-                   color: #a568d0;
+                   color: #4abdac;
                 }
 
                 > p {

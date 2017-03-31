@@ -51,11 +51,9 @@
                 .qrcode
                     img(src="../assets/qrcode.jpg" width="250" height="250")
 </template>
-<style lang="less">
-    html, body, #app {
-        height: 100%;
-    }
+<style lang="less" scoped>
     .sign {
+        padding: 10% 0;
         background: url('../assets/sign.jpeg') center no-repeat;
         background-size: cover;
         display: flex;
@@ -117,7 +115,7 @@
                     text-align: center;
                     line-height: 40px;
                     border-radius: 5px;
-                    background: #702f9e;
+                    background: #4abdac;
                     font-size: 25px;
                     color: #fff;
                     text-decoration: none;

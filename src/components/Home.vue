@@ -15,6 +15,7 @@
 </template>
 <style lang="less">
     .home {
+        margin-top: 10px;
         background: #f2f2f2;
         > .articles {
             display: flex;
@@ -25,7 +26,7 @@
                 flex: 1;
                 > h3 {
                     padding: 10px;
-                    background: #a568d0;
+                    background: #ff3b3f;
                     text-align: center;
                     font-size: 40px;
                     font-weight: bolder;

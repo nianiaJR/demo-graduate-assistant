@@ -20,7 +20,7 @@
                     margin-top: 10px;
                     padding: 10px 25px;
                     width: 200px;
-                    background-color: #ed7b3c;
+                    background-color: #ff3b3f;
                     border: none;
                     color: #fff;
                     cursor: pointer;
@@ -52,7 +52,7 @@
             padding: 8px 0px;
             width: 150px;
             color: #fff;
-            background-color: #792f9e;
+            background-color: #4abdac;
             outline: none;
             border: none;
             box-shadow: 1px 1px 1px #aaa;
@@ -76,7 +76,7 @@
         }
         > h4 {
             padding: 10px;
-            background: #792f9e;
+            background: #fba100;
             color: #fff;
         } 
         > ul {
@@ -103,11 +103,11 @@
                             box-shadow: 1px 1px 1px #aaa;
                         }
                         > .green {
-                            background: #558239;
+                            background: #4484ce;
                         }
                         > .purple {
                             margin-left: 10px;
-                            background: #a568d0;
+                            background: #4484ce;
                         }
                     }
                     > table {

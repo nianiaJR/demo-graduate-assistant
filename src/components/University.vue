@@ -38,7 +38,7 @@
                         align-items: center;
                         > button {
                             padding: 15px 50px;
-                            background: #a568d0;
+                            background: #4abdac;
                             color: #fff;
                             border: none;
                             width: 70%;
@@ -54,19 +54,20 @@
                         flex: 1;
                         display: flex;
                         padding: 20px;
-                        background: #b4c6e6;
+                        background: #ff3b3f;
                         font-size: 17px;
+                        color: #fff;
                         align-items: center;
                         > .fa-icon {
                             color: #fff;
                         }
                         > a {
                             margin-left: 10px;
-                            color: #000;
+                            color: #fff;
                         }
                     }
                     > p + p {
-                        background: #90a9da;
+                        background: #ff3b3f;
                     }
                 }
             }
@@ -93,7 +94,7 @@
                 background: #fff;
                 > h3 {
                     padding: 5px 15px;
-                    background: #a568d0;
+                    background: #fba100;
                     font-size: 24px;
                     color: #fff;
                 }
@@ -153,9 +154,6 @@
             }
             > .interviews {
                 margin-top: 10px;
-                > h3 {
-                    background: #558239;
-                }
                 > p {
                     padding: 5px 10px;
                     font-size: 15px;
@@ -189,9 +187,6 @@
 
             > .upcoming {
                 margin-top: 10px;
-                > h3 {
-                    background: #c45c21;
-                }
                 > .wrap {
                     display: flex;
                     font-size: 14px;

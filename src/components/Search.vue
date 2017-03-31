@@ -1,7 +1,4 @@
 <style lang="less">
-    #app {
-        height: auto;
-    }
     #app > .search {
         margin: 10px auto;
         width: 1000px;
@@ -55,7 +52,7 @@
                         > select {
                             padding: 10px 25px;
                             width: 200px;
-                            background-color: #ed7b3c;
+                            background-color: #ff3b3f;
                             border: none;
                             color: #fff;
                             cursor: pointer;
@@ -73,15 +70,19 @@
                             color: #fff;
                         }
                         > a {
+                            margin-left: 5px;
                             display: inline-block;
                             height: 34px;
                             width: 100px;
                             border: none;
-                            background: #6f359e;
+                            background: #4abdac;
                             color: #fff;
                             line-height: 35px;
                             text-align: center;
                         }
+                    }
+                    > li + li {
+                        margin-left: 5px;
                     }
                 }
             }
@@ -93,7 +94,7 @@
                 margin-top: 20px;
                 padding: 10px;
                 color: #fff;
-                background: #558239;
+                background: #fba100;
                 font-weight: bolder;
             }
             > .show {
@@ -119,10 +120,10 @@
                                 margin-left: 10px;
                             }
                             > .green {
-                                background: #558239;
+                                background: #4484ce;
                             }
                             > .purple {
-                                background: #702f9e;
+                                background: #4484ce;
                             }
                             > p {
                                 margin-top: 20px;
@@ -147,7 +148,7 @@
                             > button {
                                 display: inline-block;
                                 padding: 2px 10px;
-                                background: #558239;
+                                background: #fba100;
                                 border: none;
                                 border-radius: 3px;
                                 outline: none;

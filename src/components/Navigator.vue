@@ -71,7 +71,7 @@ export default {
     > .nav {
         display: flex;
         align-items: center;
-        background-color: #deebf7;
+        background-color: #efefef;
         > .logo {
             display: block;
             margin: 0 20px 0 10px;
@@ -111,7 +111,7 @@ export default {
             > .link-group {
                 > a{
                     padding: 0 8px;
-                    color: #000;
+                    color: #7b40a7;
                     text-decoration: none;
                     line-height: 30px;
                     font-size: 14px;
@@ -141,7 +141,7 @@ export default {
     > ul {
         display: flex;
         list-style: none;
-        background: #9ec2e5;
+        background: #4484ce;
         > li {
             padding: 10px 0px;
             font-size: 25px;
@@ -150,12 +150,14 @@ export default {
                 display: inline-block;
                 color: #fff;
                 text-decoration: none;
+            }
+            > a + a {
                 border-left: 2px solid #9ec2e5;
             }
             &:hover {
-                background: #0c6fbe;
+                background: #4abdac;
                 > a {
-                    border-left: 2px solid #0c6fbe;
+                    border-left: 2px solid #4abdac;
                 }
             }
         }

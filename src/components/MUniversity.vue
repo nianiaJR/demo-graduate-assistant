@@ -7,7 +7,7 @@
             background: #fff;
             > h3 {
                 padding: 10px;
-                background: #702f9e;
+                background: #fba100;
                 color: #fff;
             }
             > table {
@@ -16,13 +16,11 @@
                 > tr {
                     > th {
                         padding: 10px 0;
-                        background: #ec7f3c;
+                        background: #ff3b3f;
                         color: #fff;
                     }
                     > td {
                         padding: 5px;
-                        border-left: 1px solid #aaa;
-                        border-top: 1px solid #aaa;
                         > img {
                             width: 64px;
                         }
@@ -70,7 +68,7 @@
             background: #fff;
             > h3 {
                 padding: 10px;
-                background: #7f7f7f;
+                background: #fba100;
                 color: #fff;
             }
             > ul {
@@ -86,7 +84,7 @@
                         display: inline-block;
                         margin-top: 15px;
                         color: #fff;
-                        background: #558239;
+                        background: #4484ce;
                         border: none;
                         padding: 2px 10px;
                         border-radius: 2px;
@@ -94,9 +92,13 @@
                     > .fa-icon {
                         margin-top: 50px;
                         cursor: pointer;
+                        color: #ccc;
                         &:hover {
                             color: #aaa;
                         }
+                    }
+                    > p {
+                        color: #aaa
                     }
                 }
             }
