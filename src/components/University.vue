@@ -1,4 +1,15 @@
-<style lang="less">
+<style lang="less" scoped>
+    .dot:before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        bottom: 2px;
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+    }
     .university {
         width: 1000px;
         margin: 30px auto;
@@ -287,8 +298,10 @@
             h3 FUN FACTS
             .content
                 img(src="../assets/fun.png", height="100")
-                p The unofficial name for the Stanford mascot is - The Stanford Tree. There has been a fairly selective process to choose the students who get to play the tree, since the responsibility is in high demand.Stanfordhasmanysuccessfulsportteams.Stanfordstudentshavewonmedals ineveryOlympic Games since 1908, winning 244 Olympic medals total, 129 of them gold. In the 2008 Beijing Olympic Games, Stanford won more Olympic medals than any other university in the United States.
-                p(v-if="isMore") Stanford has a Cactus Garden, which is a botanical garden with cactus and succulents, made for Jane and Leland Stanford and was planted between 1880-1883. Some of the original plants were restored and are surviving. Stanford’s current community of scholars includes 19 Nobel Prize laureates and 4 Pulitzer Prize winners. In addition,  Stanford is the alma mater of 30 living billionaires and 17 current astronauts.
+                p.dot Stanford has many successful  sport steam.
+                p.dot Stanfords current community of scholars.
+                p.dot The unofficial name for the Stanford mascot is - The Stanford Tree. There has been a fairly selective process to choose the students who get to play the tree, since the responsibility is in high demand.Stanfordhasmanysuccessfulsportteams.Stanfordstudentshavewonmedals ineveryOlympic Games since 1908, winning 244 Olympic medals total, 129 of them gold. In the 2008 Beijing Olympic Games, Stanford won more Olympic medals than any other university in the United States.
+                p.dot(v-if="isMore") Stanford has a Cactus Garden, which is a botanical garden with cactus and succulents, made for Jane and Leland Stanford and was planted between 1880-1883. Some of the original plants were restored and are surviving. Stanford’s current community of scholars includes 19 Nobel Prize laureates and 4 Pulitzer Prize winners. In addition,  Stanford is the alma mater of 30 living billionaires and 17 current astronauts.
             .more(v-if="!isMore" @click="seeMore")
                 span see more
                 icon(name="angle-down")
