@@ -196,7 +196,7 @@
         .operate
             h3 Explore Your Options
             .search-wrap
-                p Alredy know the University
+                p Already know the University
                 .search-box
                     input(type="text")
                     icon(name="search")
@@ -246,7 +246,7 @@
                         icon(name="caret-down")
                     li
                         select()
-                            option(value="") Tuitition Fee
+                            option(value="") Tuition Fee
                             option(value="") US$20,000－$34,999 / year
                             option(value="") US$35,000－$49,999 / year
                             option(value="") Above US$50,000 / year
@@ -318,7 +318,7 @@
 export default {
     data () {
         return {
-            follow: 'Folow'
+            follow: 'Follow'
         }
     }
 }
